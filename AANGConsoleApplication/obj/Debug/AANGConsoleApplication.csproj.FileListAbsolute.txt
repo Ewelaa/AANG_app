@@ -1,0 +1,5 @@
+E:\Visual_zapisywanie\AANGConsoleApplication\AANGConsoleApplication\bin\Debug\AANGConsoleApplication.exe.config
+E:\Visual_zapisywanie\AANGConsoleApplication\AANGConsoleApplication\bin\Debug\AANGConsoleApplication.exe
+E:\Visual_zapisywanie\AANGConsoleApplication\AANGConsoleApplication\bin\Debug\AANGConsoleApplication.pdb
+E:\Visual_zapisywanie\AANGConsoleApplication\AANGConsoleApplication\obj\Debug\AANGConsoleApplication.exe
+E:\Visual_zapisywanie\AANGConsoleApplication\AANGConsoleApplication\obj\Debug\AANGConsoleApplication.pdb
