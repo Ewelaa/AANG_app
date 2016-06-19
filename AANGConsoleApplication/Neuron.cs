@@ -8,12 +8,13 @@ namespace AANGConsoleApplication
 {
     class Neuron
     {
-        public float NeuronExcitatedValue { get; set; }
+        public double NeuronExcitatedValue { get; set; }
         public String Name { get; set; }
         List<Receptor> ListOfReceptors { get; set; }
 
         public void ConnectReceptor(Receptor receptor)
         {
+            ListOfReceptors = new List<Receptor>();
             ListOfReceptors.Add(receptor);
         }
 

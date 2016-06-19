@@ -9,11 +9,13 @@ namespace AANGConsoleApplication
     class SensoryField
     {
         public String Name { get; set; }
-        public float Interval { get; set; }
+        public double Interval { get; set; }
         public Receptor Max { get; set; }
         public Receptor Min { get; set; }
         public List<Receptor> ListOfReceptors { get; set; }
-        public Receptor AddReceptor(float interval)
+
+
+        public Receptor AddReceptor(double interval)
         {
             ListOfReceptors = new List<Receptor>();
             Max = new Receptor();
@@ -51,7 +53,11 @@ namespace AANGConsoleApplication
         }
         public Receptor AddReceptor(String name)
         {
-            foreach(Receptor receptor in ListOfReceptors)
+            ListOfReceptors = new List<Receptor>();
+            Max = new Receptor();
+            Min = new Receptor();
+
+            foreach (Receptor receptor in ListOfReceptors) // odwołanie do obiektu nie zostału na wystapienie obiektu
             {
                 if (receptor.Text == name)
                 {
@@ -63,7 +69,7 @@ namespace AANGConsoleApplication
             ListOfReceptors.Add(newReceptor);
             return newReceptor;
         }
-        public void StimulateReceptor(float value)
+        public void StimulateReceptor(double value)
         {
             if(Interval > 0)
             {
@@ -91,12 +97,12 @@ namespace AANGConsoleApplication
             }
         }
 
-        public float getMaximum()
+        public double getMaximum()
         {
             return Max.ReceptorValue;
         }
 
-        public float getMinimum()
+        public double getMinimum()
         {
             return Min.ReceptorValue;
         }

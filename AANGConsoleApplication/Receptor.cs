@@ -8,12 +8,15 @@ namespace AANGConsoleApplication
 {
     class Receptor
     {
-        public float ReceptorValue { get; set; }
-        public float ExcitedReceptorValue { get; set; }
+        public double ReceptorValue { get; set; }
+        public double ExcitedReceptorValue { get; set; }
         public String Text { get; set; }
         public List<Neuron> ListOfNeurons { get; set; }
+
+
         public void ConnectNeuron(Neuron neuron)
         {
+            ListOfNeurons = new List<Neuron>();
             ListOfNeurons.Add(neuron);
         }
 
@@ -28,7 +31,7 @@ namespace AANGConsoleApplication
             }
         }
 
-        public void CalculateExcitation(float value, float interval)
+        public void CalculateExcitation(double value, double interval)
         {
             this.ExcitedReceptorValue = 1 - Math.Abs(ReceptorValue - value) / interval;
         }
@@ -41,7 +44,7 @@ namespace AANGConsoleApplication
             }
         }
 
-        public Receptor(float receptorValue)
+        public Receptor(double receptorValue)
         {
             this.ReceptorValue = receptorValue;
         }
